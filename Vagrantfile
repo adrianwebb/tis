@@ -123,6 +123,7 @@ Vagrant.configure("2") do |config|
       composer install -d "$project_dir"
 
       echo "Configuring Drupal Console utility"
+      cd "$project_dir"
       drupal init -n -y
       echo "source \\"\\$HOME/.console/console.rc\\" 2>/dev/null" > /etc/profile.d/drupal-console.sh
     SHELL
