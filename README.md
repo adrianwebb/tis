@@ -25,7 +25,7 @@ deploy starter environment.
 
 This Drupal site runs in a two container Docker environment maintained through
 Docker Compose.  There are two containers; a PostgreSQL server and an Apache / PHP
-Drupal web server.
+Drupal web server, with a shared volume for the root project directory.
 
 If you already have Docker Compose running locally on your machine, you can just
 run the docker-compose process locally.  If you do not have Docker or prefer to
@@ -37,20 +37,59 @@ system.
 
 #### Options
 
-1. Virtualbox
+1. **Virtualbox** - Install Virtualbox from: https://www.virtualbox.org/wiki/Downloads
 
-Install Virtualbox from: https://www.virtualbox.org/wiki/Downloads
+2. **Vagrant** - Install Vagrant from: https://www.vagrantup.com/downloads.html
 
-2. Vagrant
+When using Vagrant, when SSHing into the virtual machine will automatically redirect
+you to the project root directory (/var/www).  Docker, Docker Compose, Drush, Drupal
+Console, PSQL Client, and PHP Composer come installed on the Vagrant virtual
+environment initially.
 
-Install Vagrant from: https://www.vagrantup.com/downloads.html
+When the Vagrant machine is first created all Docker containers specified in the
+docker-compose configuration are created and started so the website will be viewable
+at **localhost:8080**.
+
+**To get started**
+
+  > cd {project directory}
+  > git submodule update --init --recursive
+  > vagrant up
+  > vagrant ssh
+  > {you are now in the shared project directory: **/var/www**}
+     - **/var/www/web** live at **localhost:8080**
+     - First user: **admin**
+     - Password:   **admin987** (__please change!__)
 
 
 #### OR
 
-1. Docker
+1. **Docker** - Install Docker from: https://www.docker.com/community-edition
 
-Install Docker from: https://www.docker.com/community-edition
+2. **Docker Compose** - Install Docker Compose from: https://docs.docker.com/compose/install
+
+Since this Drupal site is built on Docker, you can run the site directly from
+your local Docker instance (provided you have Docker Compose installed).
+
+If running within DOcker locally it is important to run **scripts/docker-compose.sh**
+before running **docker-compose up** because it generates the final **docker-compose.yml**
+file based on a separate variables list; **docker-variables.yml**.  The included
+Vagrantfile runs this script automatically before calling docker-compose.
+
+**To get started**
+
+  > cd {project directory}
+  > git submodule update --init --recursive
+  > ./scripts/docker-compose.sh
+  > docker-compose up -d
+  > docker exec -it www_drupal-web_1 /bin/bash (__SSH into a running container__)
+  > {you are now within the shared project directory: **/var/www/web**}
+     - **/var/www/web** live at **localhost:8080**
+     - First user: **admin**
+     - Password:   **admin987** (__please change!__)
+
+
+### Common Operations
 
 
 
