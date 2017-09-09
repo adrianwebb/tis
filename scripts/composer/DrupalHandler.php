@@ -150,22 +150,25 @@ class DrupalHandler {
       static::_runCommand("$vendor/drush/drush/drush -y --root='$root' pm-enable 'config'", 1800, FALSE);
 
       # Set new site UUID to old UUID
-      $event->getIO()->write(" * Synchronizing Drupal site UUIDs (config to live)");
-      $site_info = Yaml::parse(file_get_contents("$config/system.site.yml"));
-      $uuid = $site_info['uuid'];
-      static::_runCommand("$vendor/drush/drush/drush -y --root='$root' config-set 'system.site' uuid '$uuid'", 1800, FALSE);
+      if (file_exists("$config/system.site.yml")) {
+        $event->getIO()->write(" * Synchronizing Drupal site UUIDs (config to live)");
+        $site_info = Yaml::parse(file_get_contents("$config/system.site.yml"));
+        $uuid = $site_info['uuid'];
+        static::_runCommand("$vendor/drush/drush/drush -y --root='$root' config-set 'system.site' uuid '$uuid'", 1800, FALSE);
 
-      # Import configurations
-      $event->getIO()->write(" * Importing Drupal configurations");
-      static::_runCommand("$vendor/drush/drush/drush -y --root='$root' config-import --source='$config'", 7200, TRUE);
+        # Import configurations
+        $event->getIO()->write(" * Importing Drupal configurations");
+        static::_runCommand("$vendor/drush/drush/drush -y --root='$root' config-import --source='$config'", 7200, TRUE);
 
-      if (isset($_ENV['DOCKER_IMAGE'])) {
-        $config_override = static::_getDrupalDockerConfig($cwd, $_ENV['DOCKER_IMAGE']);
+        if (isset($_ENV['DOCKER_IMAGE'])) {
+          $config_override = static::_getDrupalDockerConfig($cwd, $_ENV['DOCKER_IMAGE']);
 
-        if ($fs->exists($config_override)) {
-          static::_runCommand("$vendor/drush/drush/drush -y --root='$root' config-import --partial --source='$config_override'", 7200, TRUE);
+          if ($fs->exists($config_override)) {
+            static::_runCommand("$vendor/drush/drush/drush -y --root='$root' config-import --partial --source='$config_override'", 7200, TRUE);
+          }
         }
       }
+
       # Run any database updates
       $event->getIO()->write(" * Applying any needed database updates");
       static::_runCommand("$vendor/drush/drush/drush -y --root='$root' updatedb", 7200, TRUE);
