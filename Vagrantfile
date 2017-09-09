@@ -126,6 +126,9 @@ Vagrant.configure("2") do |config|
       cd "$project_dir"
       drupal init -n -y
       echo "source \\"\\$HOME/.console/console.rc\\" 2>/dev/null" > /etc/profile.d/drupal-console.sh
+
+      echo "Setting SSH web directory redirect"
+      grep -q -F "cd '$project_dir'" "$HOME/.bashrc" || echo "cd '$project_dir'" >> "$HOME/.bashrc"
     SHELL
 
     s.args = [
