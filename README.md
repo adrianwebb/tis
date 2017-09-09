@@ -89,7 +89,7 @@ $ cd {project directory}
 $ git submodule update --init --recursive
 $ ./scripts/docker-compose.sh
 $ docker-compose up -d
-$ docker exec -it www_drupal-web_1 /bin/bash (__SSH into a running container__)
+$ docker exec -it www_drupal-web_1 /bin/bash   # SSH into a running container
 ```
 
 You are now within the shared project directory: **/var/www/web**
