@@ -129,6 +129,9 @@ Vagrant.configure("2") do |config|
 
       echo "Setting SSH web directory redirect"
       grep -q -F "cd '$project_dir'" "$HOME/.bashrc" || echo "cd '$project_dir'" >> "$HOME/.bashrc"
+
+      echo "Ensuring all vagrant home files are owned by vagrant user"
+      chown -R vagrant:vagrant "$HOME"
     SHELL
 
     s.args = [
