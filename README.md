@@ -35,6 +35,7 @@ spins up the proper containers and exposes the right ports to the host operating
 system.
 
 
+---
 #### Vagrant Environment
 
 1. **Virtualbox** - Install Virtualbox from: https://www.virtualbox.org/wiki/Downloads
@@ -66,6 +67,7 @@ You are now in the shared project directory: **/var/www**
 * Password:   **admin987** (__please change!__)
 
 
+---
 #### Docker Environment
 
 1. **Docker** - Install Docker from: https://www.docker.com/community-edition
@@ -97,6 +99,7 @@ You are now within the shared project directory: **/var/www/web**
 * Password:   **admin987** (__please change!__)
 
 
+---
 ### Common Operations
 
 
