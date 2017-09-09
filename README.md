@@ -35,7 +35,7 @@ spins up the proper containers and exposes the right ports to the host operating
 system.
 
 
-#### Options
+#### Vagrant Environment
 
 1. **Virtualbox** - Install Virtualbox from: https://www.virtualbox.org/wiki/Downloads
 
@@ -52,17 +52,21 @@ at **localhost:8080**.
 
 **To get started**
 
-  > cd {project directory}
-  > git submodule update --init --recursive
-  > vagrant up
-  > vagrant ssh
-  > {you are now in the shared project directory: **/var/www**}
-     - **/var/www/web** live at **localhost:8080**
-     - First user: **admin**
-     - Password:   **admin987** (__please change!__)
+```bash
+$ cd {project directory}
+$ git submodule update --init --recursive
+$ vagrant up
+$ vagrant ssh
+```
+ 
+You are now in the shared project directory: **/var/www**
+
+* **/var/www/web** live at **localhost:8080**
+* First user: **admin**
+* Password:   **admin987** (__please change!__)
 
 
-#### OR
+#### Docker Environment
 
 1. **Docker** - Install Docker from: https://www.docker.com/community-edition
 
@@ -78,15 +82,19 @@ Vagrantfile runs this script automatically before calling docker-compose.
 
 **To get started**
 
-  > cd {project directory}
-  > git submodule update --init --recursive
-  > ./scripts/docker-compose.sh
-  > docker-compose up -d
-  > docker exec -it www_drupal-web_1 /bin/bash (__SSH into a running container__)
-  > {you are now within the shared project directory: **/var/www/web**}
-     - **/var/www/web** live at **localhost:8080**
-     - First user: **admin**
-     - Password:   **admin987** (__please change!__)
+```bash
+$ cd {project directory}
+$ git submodule update --init --recursive
+$ ./scripts/docker-compose.sh
+$ docker-compose up -d
+$ docker exec -it www_drupal-web_1 /bin/bash (__SSH into a running container__)
+```
+
+You are now within the shared project directory: **/var/www/web**
+ 
+* **/var/www/web** live at **localhost:8080**
+* First user: **admin**
+* Password:   **admin987** (__please change!__)
 
 
 ### Common Operations
