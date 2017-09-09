@@ -1,0 +1,19 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Bootstrap Site'
+description: 'Simple single column layout made for Panels.'
+package: 'Bootstrap'
+
+regions:
+  navigation: 'Navigation'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  footer: 'Footer'
+
+libraries:
+  - 'bootstrap_site/global-styling'
+  - 'bootstrap_site/bootstrap-scripts'

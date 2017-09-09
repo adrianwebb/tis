@@ -1,0 +1,19 @@
+# Backups
+private/backup_migrate/*.mysql
+private/backup_migrate/*.mysql.info
+
+# Drupal
+web/sites/default/settings.local.php
+
+# Version control
+.git
+
+# Documentation
+*.md
+
+# Eclipse project files
+.project
+.cache
+
+# Other files
+*.swp

@@ -1,0 +1,34 @@
+# Docker Compose files
+docker-compose.yml
+docker-variables.yml
+
+# Drupal build files
+drush/contrib
+config/*.gz
+config/*.bzip
+vendor
+web/core
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
+web/sites/*/files
+web/sites/default/settings.local.php
+
+# Cloud Foundry files
+manifest.yml
+manifest-variables.dev.yml
+manifest-variables.prod.yml
+cf-ssh.yml
+
+# Vagrant files
+.vagrant
+config.yml
+
+# Eclipse project files
+.project
+.cache
+
+# Other files
+*.swp
+.DS_Store
