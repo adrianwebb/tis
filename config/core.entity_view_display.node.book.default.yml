@@ -1,0 +1,34 @@
+uuid: 874e0e7d-1cb2-46b4-a5eb-6ed6bf66ab07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.book.body
+    - node.type.book
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: UWTnZUj-u-jp8I_S1C1nUCTlM5iIV2QKdxm37ehFjoI
+id: node.book.default
+targetEntityType: node
+bundle: book
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 101
+    region: content
+hidden: {  }

@@ -1,0 +1,36 @@
+uuid: 8cce275c-bebb-4915-b593-53cdbd0eb81e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.body
+    - node.type.book
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: krIbNOdqw4vMF3Ty8qAW6AxgxmdBig5XuQRBW8-HYCU
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 100
+    region: content
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 101
+    region: content
+hidden: {  }

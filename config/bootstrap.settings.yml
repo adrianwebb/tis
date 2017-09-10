@@ -1,3 +1,7 @@
+schemas:
+  bootstrap: 8000
+_core:
+  default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: themes/custom/bootstrap_site/favicon.ico
@@ -12,5 +16,3 @@ logo:
   path: themes/custom/bootstrap_site/screenshot.png
   url: ''
   use_default: true
-_core:
-  default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8
