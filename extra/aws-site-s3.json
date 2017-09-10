@@ -1,11 +1,11 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS Cloudformation template to create a test S3 bucket for this Drupal app",
+  "Description": "AWS Cloudformation template to create an S3 bucket for the Team Integration System prototype",
   "Parameters": {
     "Name": {
       "Description": "Name of the S3 bucket to create",
       "Type": "String",
-      "Default": "site-bucket"
+      "Default": "tis-prototype-fs"
     }
   },
   "Resources": {
