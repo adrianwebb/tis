@@ -8,7 +8,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$([ `readlink "$0"` ] && echo "`readlink "$0"`" || echo "$0")")"; pwd -P)"
 TOP_DIR="$SCRIPT_DIR/.."
 
-APP_DEFAULT_NAME="site"
+APP_DEFAULT_NAME="tis"
 APP_NAME="$APP_DEFAULT_NAME"
 
 APP_DEFAULT_START="start"
