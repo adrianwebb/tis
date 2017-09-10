@@ -1,24 +1,17 @@
-# Starter Drupal environment
+# Team Integration System prototype
 
-The purpose of this Drupal web application is to provide an easy to modify and
-deploy starter environment.
+This is a VERY early experiment into a functional TIS prototype.
 
 
 ## Getting Started
 
 ### File Updates
 
-* composer.json - (update Name, Description, Keywords, Authors)
+* composer.json - (update Authors)
 * vagrant-config.yml - (copy default and update cpus, memory, and host IP)
 * docker-variables.yml - (copy default and update AWS S3 information)
 * manifest-variables.dev.yml - (copy default and update Name, Host, and Description)
 * manifest-variables.prod.yml - (copy default and update Name, Host, and Description)
-
-* scripts/cg-init.sh - (update APP_DEFAULT_NAME)
-* scripts/cg-push.sh - (update APP_DEFAULT_NAME)
-* scripts/cg-destroy.sh - (update APP_DEFAULT_NAME)
-
-* private/hash_salt.txt - (update the random hash salt string)
 
 
 ### Development Environment
@@ -59,12 +52,12 @@ $ git submodule update --init --recursive
 $ vagrant up
 $ vagrant ssh
 ```
- 
+
 You are now in the shared project directory: **/var/www**
 
 * **/var/www/web** live at **localhost:8080**
 * First user: **admin**
-* Password:   **admin987** (__please change!__)
+* Password:   **admin987** (_please change!_)
 
 
 ---
@@ -93,10 +86,10 @@ $ docker exec -it www_drupal-web_1 /bin/bash   # SSH into a running container
 ```
 
 You are now within the shared project directory: **/var/www/web**
- 
+
 * **/var/www/web** live at **localhost:8080**
 * First user: **admin**
-* Password:   **admin987** (__please change!__)
+* Password:   **admin987** (_please change!_)
 
 
 ---
