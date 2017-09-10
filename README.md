@@ -48,7 +48,7 @@ at **localhost:8080**.
 
 ```bash
 $ cd {project directory}
-$ git submodule update --init --recursive
+$ git submodule update --init --recursive   # Add the Bootstrap library to the project
 $ vagrant up
 $ vagrant ssh
 ```
@@ -79,7 +79,7 @@ Vagrantfile runs this script automatically before calling docker-compose.
 
 ```bash
 $ cd {project directory}
-$ git submodule update --init --recursive
+$ git submodule update --init --recursive      # Add the Bootstrap library to the project
 $ ./scripts/docker-compose.sh
 $ docker-compose up -d
 $ docker exec -it www_drupal-web_1 /bin/bash   # SSH into a running container
@@ -140,8 +140,8 @@ More on the [docker commands](https://docs.docker.com/engine/reference/commandli
 * Run from the **/var/www/web** directory
 
 ```bash
-$ drush cex   # Export site configurations to top level **config** directory
-$ drush cim   # Import site configurations from top level **config** directory
+$ drush cex   # Export site configurations to top level config directory
+$ drush cim   # Import site configurations from top level config directory
 ```
 
 
