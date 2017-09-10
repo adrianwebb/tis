@@ -1,0 +1,14 @@
+uuid: 855f1ea5-713b-4bf5-aefe-f1bb012ace60
+name: 'Drupal Site'
+mail: user@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
