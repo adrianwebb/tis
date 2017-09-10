@@ -1,0 +1,14 @@
+uuid: daa9291e-5e55-4402-b7f5-fed62e623921
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.contractor
+  module:
+    - user
+id: user_add_role_action.contractor
+label: 'Add the Contractor role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: contractor

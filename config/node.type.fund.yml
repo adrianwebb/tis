@@ -1,0 +1,17 @@
+uuid: 54fcd41e-71b3-484e-a2de-38923c05cc7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Fund
+type: fund
+description: 'A funding stream that can be used to purchase services from the marketplace with constraints.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

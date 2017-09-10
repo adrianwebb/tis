@@ -1,0 +1,14 @@
+uuid: 79ab55c6-64bf-45df-b182-bc72582b2e40
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.contractor
+  module:
+    - user
+id: user_remove_role_action.contractor
+label: 'Remove the Contractor role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: contractor

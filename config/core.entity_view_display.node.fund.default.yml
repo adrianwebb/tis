@@ -1,0 +1,32 @@
+uuid: 46a46a0c-97ae-4af6-b5e0-85969b61791c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fund.body
+    - node.type.fund
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.fund.default
+targetEntityType: node
+bundle: fund
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

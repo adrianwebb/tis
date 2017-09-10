@@ -1,0 +1,18 @@
+uuid: 735d2c24-2d1f-4443-9a5a-c36906dfa9e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fund
+id: node.fund.title
+field_name: title
+entity_type: node
+bundle: fund
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,17 @@
+uuid: 26c5d119-819f-4a12-89f5-4022682d3ac4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Team
+type: team
+description: 'A team that is composed of professionals in the marketplace pursuing an agreed upon goal.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

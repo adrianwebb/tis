@@ -1,0 +1,22 @@
+uuid: abbb9b03-8436-42e0-ad50-6351a99d601d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fund
+  module:
+    - text
+id: node.fund.body
+field_name: body
+entity_type: node
+bundle: fund
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
