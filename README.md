@@ -35,8 +35,8 @@ system.
 
 2. **Vagrant** - Install Vagrant from: https://www.vagrantup.com/downloads.html
 
-When using Vagrant, when SSHing into the virtual machine will automatically redirect
-you to the project root directory (/var/www).  Docker, Docker Compose, Drush, Drupal
+When using Vagrant, when SSHing into the virtual machine, you will automatically redirect
+you to the project root directory (**/var/www**).  Docker, Docker Compose, Drush, Drupal
 Console, PSQL Client, and PHP Composer come installed on the Vagrant virtual
 environment initially.
 
@@ -68,9 +68,9 @@ You are now in the shared project directory: **/var/www**
 2. **Docker Compose** - Install Docker Compose from: https://docs.docker.com/compose/install
 
 Since this Drupal site is built on Docker, you can run the site directly from
-your local Docker instance (provided you have Docker Compose installed).
+your local Docker instance (_provided you have Docker Compose installed_).
 
-If running within DOcker locally it is important to run **scripts/docker-compose.sh**
+If running within Docker locally it is important to run **scripts/docker-compose.sh**
 before running **docker-compose up** because it generates the final **docker-compose.yml**
 file based on a separate variables list; **docker-variables.yml**.  The included
 Vagrantfile runs this script automatically before calling docker-compose.
@@ -98,6 +98,7 @@ You are now within the shared project directory: **/var/www/web**
 #### Vagrant Controls
 
 * Run from the **host** machine
+* Run from the **/var/www** directory
 
 ```bash
 $ vagrant status       # Check the status of the virtual machine
@@ -116,6 +117,7 @@ More on the [vagrant commands](https://www.vagrantup.com/docs/cli/)
 #### Docker Controls
 
 * Run on either the **vagrant** or **host** machine (_if installed and used_)
+* Run from the **/var/www** directory
 
 ```bash
 $ docker ps -a                           # List all of the containers on the virtual machine
@@ -135,10 +137,11 @@ More on the [docker commands](https://docs.docker.com/engine/reference/commandli
 #### Site Configuration Management
 
 * Run from the Drupal web **docker** container
+* Run from the **/var/www/web** directory
 
 ```bash
-drush cex   # Export site configurations to top level **config** directory
-drush cim   # Import site configurations from top level **config** directory
+$ drush cex   # Export site configurations to top level **config** directory
+$ drush cim   # Import site configurations from top level **config** directory
 ```
 
 
