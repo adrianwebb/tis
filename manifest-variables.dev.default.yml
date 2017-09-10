@@ -1,7 +1,7 @@
-APP_NAME: "site-dev"
+APP_NAME: "tis-dev"
 INSTANCES: 1
 MEMORY: "512M"
-HOST: "site-dev"
+HOST: "tis-dev"
 DOMAIN: "app.cloud.gov"
 LOG_LEVEL: "INFO"
 FILES_REGION: "us-east-1"
