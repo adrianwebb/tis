@@ -95,6 +95,51 @@ You are now within the shared project directory: **/var/www/web**
 ---
 ### Common Operations
 
+#### Vagrant Controls
+
+* Run from the **host** machine
+
+```bash
+$ vagrant status       # Check the status of the virtual machine
+
+$ vagrant up           # Create a new or run an existing virtual machine
+$ vagrant provision    # Re-provision development environment from specs in Vagrantfile
+$ vagrant ssh          # SSH into a running virtual machine
+
+$ vagrant halt         # Stop and save an existing virtual machine
+$ vagrant destroy      # Completely destroy an existing virtual machine
+```
+
+More on the [vagrant commands](https://www.vagrantup.com/docs/cli/)
+
+
+#### Docker Controls
+
+* Run on either the **vagrant** or **host** machine (_if installed and used_)
+
+```bash
+$ docker ps -a                           # List all of the containers on the virtual machine
+
+$ docker logs www_drupal-web_1           # Display recent log entries from the www_drupal-web_1 container
+$ docker logs www_drupal-web_1 --follow  # Follow log entries from the www_drupal-web_1 container
+
+$ docker exec -it www_drupal-web_1 bash  # SSH into the running www_drupal-web_1 container
+
+$ docker-compose up -d                   # Create and run all site containers in the background
+$ docker-compose build                   # Rebuild all docker images in the docker-compose file
+```
+
+More on the [docker commands](https://docs.docker.com/engine/reference/commandline/cli/)
+
+
+#### Site Configuration Management
+
+* Run from the Drupal web **docker** container
+
+```bash
+drush cex   # Export site configurations to top level **config** directory
+drush cim   # Import site configurations from top level **config** directory
+```
 
 
 ## Scope
