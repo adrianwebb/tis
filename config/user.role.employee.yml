@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: employee
 label: Employee
-weight: 5
+weight: -5
 is_admin: null
 permissions: {  }

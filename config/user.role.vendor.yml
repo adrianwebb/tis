@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: vendor
 label: Vendor
-weight: 3
+weight: -4
 is_admin: null
 permissions: {  }

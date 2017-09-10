@@ -4,6 +4,15 @@ status: true
 dependencies: {  }
 id: manager
 label: Manager
-weight: 2
+weight: -6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create fund content'
+  - 'create team content'
+  - 'delete own fund content'
+  - 'delete own team content'
+  - 'edit own fund content'
+  - 'edit own team content'
+  - 'revert fund revisions'
+  - 'revert team revisions'
+  - 'view team revisions'

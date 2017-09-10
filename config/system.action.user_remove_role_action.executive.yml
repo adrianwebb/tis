@@ -1,0 +1,14 @@
+uuid: 85b23deb-5714-4e00-8b06-eb55a59eeae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.executive
+  module:
+    - user
+id: user_remove_role_action.executive
+label: 'Remove the Executive role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: executive

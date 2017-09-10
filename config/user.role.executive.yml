@@ -1,0 +1,13 @@
+uuid: 6fdab698-2777-47af-91bc-a8955e0fc5b0
+langcode: en
+status: true
+dependencies: {  }
+id: executive
+label: Executive
+weight: -7
+is_admin: null
+permissions:
+  - 'create fund content'
+  - 'delete own fund content'
+  - 'edit own fund content'
+  - 'revert fund revisions'

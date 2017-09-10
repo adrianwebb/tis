@@ -6,7 +6,18 @@ _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
 label: 'Authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
-  - 'access content'
+  - 'access comments'
+  - 'access printer-friendly version'
+  - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'change own username'
+  - 'edit own comments'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use advanced search'
+  - 'view fund revisions'
+  - 'view own unpublished content'
