@@ -138,6 +138,7 @@ More on the [docker commands](https://docs.docker.com/engine/reference/commandli
 
 * Run from the Drupal web **docker** container
 * Run from the **/var/www/web** directory
+* Configurations are imported from and exported to the **/var/www/config** directory
 
 ```bash
 $ drush cex   # Export site configurations to top level config directory
