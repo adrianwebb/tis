@@ -1,8 +1,8 @@
 {
-  "name": "adrianwebb/drupal-base",
+  "name": "adrianwebb/tis",
   "type": "project",
-  "description": "Starter template for building Drupal 8 sites for cloud.gov and local virtualized docker environments.",
-  "keywords": ["drupal"],
+  "description": "Test prototype of the Team Integration System",
+  "keywords": ["drupal", "teams", "talent", "marketplace", "acquisition"],
   "license": "CC0-1.0",
   "authors": [
     {
