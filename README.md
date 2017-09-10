@@ -7,11 +7,11 @@ This is a VERY early experiment into a functional TIS prototype.
 
 ### File Updates
 
-* composer.json - (update Authors)
-* vagrant-config.yml - (copy default and update cpus, memory, and host IP)
-* docker-variables.yml - (copy default and update AWS S3 information)
-* manifest-variables.dev.yml - (copy default and update Name, Host, and Description)
-* manifest-variables.prod.yml - (copy default and update Name, Host, and Description)
+* **composer.json** - (_update Authors_)
+* **vagrant-config.yml** - (_copy default and update cpus, memory, and host IP_)
+* **docker-variables.yml** - (_copy default and update AWS S3 information_)
+* **manifest-variables.dev.yml** - (_copy default and update Name, Host, and Description_)
+* **manifest-variables.prod.yml** - (_copy default and update Name, Host, and Description_)
 
 
 ### Development Environment
