@@ -3,6 +3,29 @@
 This is a VERY early experiment into a functional TIS prototype.
 
 
+## Scope
+
+Right now to keep things very simple for a MVP this serves three basic functions:
+
+*
+
+
+
+## Architecture
+
+This is a PHP web platform built on Drupal 8.  Drupal was chosen because it
+provides an easy means of exploring and editing things, such as what data
+fields might be tracked over time or managing access without requiring software
+updates and deployments.
+
+Since this is a prototype and meant to be a starting point, there has been
+little focus on creating custom modules or themes.  If this proves a useful
+tool then that can be improved over time.
+
+This portal is built for deployment to https://cloud.gov.  Documentation on how
+to deploy to cloud.gov coming soon.
+
+
 ## Getting Started
 
 ### File Updates
@@ -149,23 +172,14 @@ $ drush cim   # Import site configurations from top level config directory
 ```
 
 
-## Scope
+#### Composer Operations
 
-Right now to keep things very simple for a MVP this serves {num} basic functions:
+* Run from the Drupal web **docker** container
+* Run from the **/var/www** directory
+* See the **composer.json** and **scripts/composer/DrupalHandler.php** script
 
+```bash
+$ composer install              # Install all dependencies and run all update operations
 
-
-
-## Architecture
-
-This is a PHP web platform built on Drupal 8.  Drupal was chosen because it
-provides an easy means of exploring and editing things, such as what data
-fields might be tracked over time or managing access without requiring software
-updates and deployments.
-
-Since this is a prototype and meant to be a starting point, there has been
-little focus on creating custom modules or themes.  If this proves a useful
-tool then that can be improved over time.
-
-This portal is built for deployment to https://cloud.gov.  See INSTALL.md for
-more information about how to install yourself into cloud.gov or Cloud Foundry.
+$ scripts/composer-rebuild.sh   # Delete all cached data and existing build files and run composer install process
+```
